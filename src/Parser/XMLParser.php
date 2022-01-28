@@ -7,7 +7,7 @@ use SimpleXMLElement;
 
 trait XMLParser
 {
-    private static function parse(SimpleXMLElement $node): mixed
+    private static function parse(SimpleXMLElement $node)
     {
         $parent = self::morph($node->getName());
 
@@ -29,7 +29,7 @@ trait XMLParser
         return $parent;
     }
 
-    private static function morph(string $name): mixed
+    private static function morph(string $name)
     {
         $type = self::$class_map[$name];
         return new $type;

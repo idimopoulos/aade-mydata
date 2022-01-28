@@ -4,7 +4,7 @@ namespace Firebed\AadeMyData\Models;
 
 abstract class Type
 {
-    protected array $attributes = [];
+    protected $attributes = [];
 
     public function put($key, $value): self
     {
