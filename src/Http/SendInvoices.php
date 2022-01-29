@@ -19,6 +19,6 @@ class SendInvoices extends MyDataRequest
     public function handle(InvoicesDoc $invoicesDoc): ResponseDoc
     {
         $body = (new InvoicesDocXML())->asXML($invoicesDoc);
-        return $this->post(body: $body);
+        return $this->post(NULL, $body);
     }
 }
