@@ -3,11 +3,11 @@
 namespace Firebed\AadeMyData\Parser;
 
 use Error;
-use SimpleXMLElement;
+use SimpleXMLIterator;
 
 trait XMLParser
 {
-    private static function parse(SimpleXMLElement $node)
+    private static function parse(SimpleXMLIterator $node)
     {
         $parent = self::morph($node->getName());
 
@@ -35,7 +35,7 @@ trait XMLParser
         return new $type;
     }
 
-    private static function applyClassifications(SimpleXMLElement $node, object $parent): void
+    private static function applyClassifications(SimpleXMLIterator $node, object $parent): void
     {
         if ($node->getName() === 'expensesClassification') {
             self::parseClassification($node, $parent, 'ecls');
@@ -44,7 +44,7 @@ trait XMLParser
         }
     }
 
-    private static function parseClassification(SimpleXMLElement $node, object $parent, string $namespace): void
+    private static function parseClassification(SimpleXMLIterator $node, object $parent, string $namespace): void
     {
         $type = $node->xpath("$namespace:classificationType");
         $category = $node->xpath("$namespace:classificationCategory");
