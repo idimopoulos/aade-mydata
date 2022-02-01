@@ -28,9 +28,9 @@ class PaymentMethodDetailType extends Type
     }
 
     /**
-     * @return float Ποσό Πληρωμής
+     * @return float|null Ποσό Πληρωμής
      */
-    public function getAmount(): float
+    public function getAmount(): ?float
     {
         return $this->get('amount');
     }

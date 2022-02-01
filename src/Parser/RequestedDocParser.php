@@ -2,7 +2,7 @@
 
 namespace Firebed\AadeMyData\Parser;
 
-use SimpleXMLElement;
+use SimpleXMLIterator;
 
 class RequestedDocParser
 {
@@ -10,7 +10,7 @@ class RequestedDocParser
 
     private static array $class_map;
 
-    public static function parseXML(SimpleXMLElement $xml): mixed
+    public static function parseXML(SimpleXMLIterator $xml)
     {
         self::$class_map = require __DIR__ . '/../../config/class_map.php';
 

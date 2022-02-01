@@ -69,7 +69,7 @@ class MyDataRequest
         self::validateCredentials();
 
         $response = $this->client()->get($this->url, ['query' => $query]);
-        return RequestedDocParser::parseXML(simplexml_load_string($response->getBody()));
+        return RequestedDocParser::parseXML(simplexml_load_string($response->getBody(), 'SimpleXMLIterator'));
     }
 
     /**
@@ -89,7 +89,7 @@ class MyDataRequest
         }
 
         $response = $this->client()->post($this->url, $params);
-        $xml = simplexml_load_string($response->getBody());
+        $xml = simplexml_load_string($response->getBody(), 'SimpleXMLIterator');
         return ResponseDocParser::parseXML($xml);
     }
 
