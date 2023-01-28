@@ -8,9 +8,9 @@ This package provides an expressive, fluent interface to ΑΑΔΕ myDATA invoici
 
 | Version | PHP | myDATA |
 |---------|-----|--------|
-| ^v.3.0  | 8.1 | v1.0.6 |
-| ^v.2.0  | 8.1 | v1.0.5 |
-| ^v.1.0  | 8.0 | v1.0.3 |
+| ^v.3.x  | 8.1 | v1.0.6 |
+| ^v.2.x  | 8.1 | v1.0.5 |
+| ^v.1.x  | 8.0 | v1.0.3 |
 
 - guzzlehttp/guzzle >= 7.0
 
@@ -31,7 +31,7 @@ By default, the package's classes are loaded automatically. There is nothing for
 <p>Official myDATA webpage: <a href="https://www.aade.gr/mydata">AADE myDATA</a></p>
 <p>Official documentation: <a href="https://www.aade.gr/sites/default/files/2022-09/myDATA%20API%20Documentation%20v1.0.6_official_erp.pdf">AADE myDATA REST API v1.0.6.</a></p>
 <p>In order to use this package, you will need first a <b>user id</b> and a <b>subscription key</b>. You can get these credentials by signing up to mydata rest api.</p>
-<div>Development: <a href="https://mydata-register.azurewebsites.net/">Sign up to mydata development api</a></div>
+<div>Development: <a href="https://mydata-dev.portal.azure-api.net/docs/services">Sign up to mydata development api</a></div>
 <div>Production: <a href="https://www.aade.gr/mydata">Sign up to mydata production api</a></div>
 
 ### Available methods
